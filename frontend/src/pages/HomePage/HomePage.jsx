@@ -1,44 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import './HomePage.css';
+import Navbar from '../../components/Navbar/Navbar.jsx';
+import Section from '../../components/Section/Section.jsx';
 
 const HomePage = () => {
-  const [books, setBooks] = useState([]);
-
-  useEffect(() => {
-    const fetchBooks = async () => {
-      try {
-        const res = await axios.get('http://localhost:5002/books'); // Update port if needed
-        setBooks(res.data);
-      } catch (err) {
-        console.error('Failed to fetch books:', err.message);
-      }
-    };
-    fetchBooks();
-  }, []);
-
   return (
-    <div className="home-container">
-      <h1 className="home-heading">📚 Library Book Catalog</h1>
-      <div className="book-grid">
-        {books.map((book) => (
-          <div className="book-card" key={book._id}>
-            <img
-              src={book.coverImage || 'https://via.placeholder.com/150'}
-              alt={book.title}
-              className="book-image"
-            />
-            <div className="book-info">
-              <h3 className="book-title">{book.title}</h3>
-              <p className="book-author">by {book.author}</p>
-              <p className="book-stock">
-                {book.inStock > 0 ? `Available (${book.inStock})` : 'Out of stock'}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <>
+      <Navbar />
+
+      <Section
+        id="browse"
+        title="Browse Available Books"
+        description="Explore all books in our library. No account needed."
+        buttonText= "Browse Books"
+        navigateTo="/all-books"
+      >
+        {/* Later, you can map book cards here */}
+        <p>📚 Book list will go here...</p>
+      </Section>
+
+      <Section
+        id="request"
+        title="Request a Library Card"
+        description="Sign in to request your own library card."
+        buttonText= "Request Card"
+      >
+        <p>🔐 Requires login</p>
+      </Section>
+
+      <Section
+        id="borrowed"
+        title="Your Borrowed Books"
+        description="View your current loans and due dates."
+        buttonText= "View Borrowed"
+      >
+        <p>📅 Login to see borrowed books</p>
+      </Section>
+    </>
   );
 };
 

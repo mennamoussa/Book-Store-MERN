@@ -4,6 +4,7 @@ import './App.css';
  import HomePage from './pages/HomePage/HomePage.jsx';
  import Register from './pages/Registration/Register.jsx'
  import Login from './pages/Login/Login.jsx'
+ import AllBooks from './pages/Books/AllBooks.jsx'
  
  
  function App() {
@@ -14,6 +15,7 @@ import './App.css';
            <Route path="/" element={<HomePage />} />
            <Route path="/registration" element={<Register />} />
            <Route path="/login" element={<Login />} />
+           <Route path="/all-books" element={<AllBooks />} />
          </Routes>
        </BrowserRouter>
      </div>

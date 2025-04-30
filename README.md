@@ -11,4 +11,8 @@
 2. added a functional login form
 3. tested both forms (they're also working!)
 
-
+# v 1.2
+1. replaced homepage to allbooks page
+2. added sections in homepage
+3. added navbar
+4. connected button to all-books page
