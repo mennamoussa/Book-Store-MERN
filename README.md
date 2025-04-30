@@ -4,3 +4,4 @@
 3. connected DB
 4. tested APIs (they're working!)
 5. users profile uploads is causing an issue
+6. added a sample registration form
