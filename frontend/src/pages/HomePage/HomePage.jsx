@@ -19,9 +19,10 @@ const HomePage = () => {
 
       <Section
         id="request"
-        title="Request a Library Card"
+        title="Library Card"
         description="Sign in to request your own library card."
         buttonText= "Request Card"
+        navigateTo="/library-card"
       >
         <p>🔐 Requires login</p>
       </Section>

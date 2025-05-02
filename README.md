@@ -16,3 +16,10 @@
 2. added sections in homepage
 3. added navbar
 4. connected button to all-books page
+
+# v 1.3
+1. added a sample profile page
+2. fixed the user token so its working when they login
+3. when logged in shows profile with user's data
+4. added library card actions (frontend)
+5. added sample forms for each (not functional yet)

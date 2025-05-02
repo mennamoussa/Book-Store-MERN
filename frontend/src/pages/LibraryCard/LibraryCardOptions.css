@@ -1,0 +1,38 @@
+.card-options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fefcf9;
+    min-height: 100vh;
+  }
+  
+  .card-options-container h2 {
+    font-family: 'Georgia', serif;
+    color: #4e3629;
+    margin-bottom: 40px;
+  }
+  
+  .options-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .options-grid button {
+    background-color: #7d9773;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Georgia', serif;
+  }
+  
+  .options-grid button:hover {
+    background-color: #5d7557;
+  }
+  

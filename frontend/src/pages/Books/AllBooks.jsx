@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './AllBooks.css';
+import Navbar from '../../components/Navbar/Navbar';
 
 const AllBooks = () => {
   const [books, setBooks] = useState([]);
@@ -18,8 +19,10 @@ const AllBooks = () => {
   }, []);
 
   return (
+    <>
+    <Navbar />
     <div className="home-container">
-      <h1 className="home-heading">📚 Library Book Catalog</h1>
+      {/* <h1 className="home-heading">📚 Library Book Catalog</h1> */}
       <div className="book-grid">
         {books.map((book) => (
           <div className="book-card" key={book._id}>
@@ -38,7 +41,8 @@ const AllBooks = () => {
           </div>
         ))}
       </div>
-    </div>
+    </div></>
+    
   );
 };
 

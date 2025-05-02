@@ -15,17 +15,23 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const res = await axios.post('http://localhost:5001/users/login', formData);
+      const data = res.data;
+  
+      // ✅ Save token and user to localStorage
+      localStorage.setItem('token', data.accesstoken);
+      localStorage.setItem('user', JSON.stringify(data.user));
+  
       setMessage('✅ Login successful!');
-      console.log(res.data); // you might store a token here later
       navigate('/'); 
     } catch (error) {
       console.error(error);
       setMessage(`❌ ${error.response?.data?.message || 'Login failed'}`);
     }
   };
+  
 
   return (
     <div className="login-container">
